@@ -92,3 +92,15 @@
   
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
 <% end %>
+
+<h1>Photos</h1>
+
+<% @place.photos.each do |photo| %>
+  <div>
+    <blockquote>
+      
+        <%= photo.caption %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
